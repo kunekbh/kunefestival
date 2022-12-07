@@ -1,0 +1,20 @@
+/* Containers for the articles that fetch data */
+
+#article_fetch_artist {
+  display: flex;
+  justify-content: center;
+}
+
+.artist_description {
+  max-width: 65ch;
+}
+
+.artist_container_time_location {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container_find_more {
+  display: flex;
+  flex-direction: row;
+}
