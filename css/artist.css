@@ -1,20 +1,120 @@
-/* Containers for the articles that fetch data */
-
-#article_fetch_artist {
-  display: flex;
-  justify-content: center;
+:root {
+  --black: #000000;
+  --white: #ffffff;
 }
 
-.artist_description {
-  max-width: 65ch;
+@media only screen and (min-width: 950px) {
+  /* Containers for the articles that fetch data */
+
+  #article_fetch_artist {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .artist_container_time_location {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container_find_more {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container_year_title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container_artist_country {
+    display: flex;
+  }
+
+  .container_display_artist1 {
+    padding: 1em;
+  }
+
+  .container_display_artist2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  /* styling of elements */
+
+  .artist_image {
+    max-width: 30em;
+  }
+
+  .artist_description {
+    max-width: 60ch;
+    font-family: montserrat;
+    font-size: 2em;
+  }
+
+  .artist_location,
+  .artist_when {
+    font-weight: bold;
+    margin-bottom: -1em;
+  }
+
+  .artist_year,
+  .artist_title,
+  .artist_country,
+  .artist_location,
+  .artist_location_input,
+  .artist_when,
+  .artist_when_input,
+  .find__more {
+    text-transform: uppercase;
+    font-family: montserrat;
+  }
+
+  .artist_when {
+    text-align: right;
+  }
 }
 
-.artist_container_time_location {
-  display: flex;
-  justify-content: space-between;
+/* Graphics for SoMe icons */
+
+.input__soundcloud {
+  background-image: url("../graphics/soundcloud.svg");
+  height: 30px;
+  width: 30px;
+  margin: 0.5em;
 }
 
-.container_find_more {
-  display: flex;
-  flex-direction: row;
+.input__instagram {
+  background-image: url("../graphics/instagram.svg");
+  background-repeat: none;
+  height: 30px;
+  width: 30px;
+  margin: 0.5em;
+}
+
+.input__vimeo {
+  background-image: url("../graphics/vimeo.svg");
+  background-repeat: none;
+  height: 30px;
+  width: 30px;
+  margin: 0.5em;
+}
+
+.input__youtube {
+  background-image: url("../graphics/youtube.svg");
+  background-repeat: none;
+  height: 30px;
+  width: 30px;
+  margin: 0.5em;
+}
+
+/* Displaying the icons dark or bright */
+
+.bright_some {
+  opacity: 15%;
+}
+
+.dark_some {
+  opacity: 100%;
 }
