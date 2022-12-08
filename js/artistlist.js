@@ -14,41 +14,42 @@ function dataReceived(data) {
   //   postMessage.forEach((post) => {
   //   console.log(hello, post);
 }
-// const button = document.querySelector("button.filter");
-// button.addEventListener("click", showOnlyAudio);
-// button.addEventListener("click", showOnlyArt);
-// button.addEventListener("click", showOnlyActivities);
+const button = document.querySelector("button.filter");
+button.addEventListener("click", showOnlyAudio);
+button.addEventListener("click", showOnlyArt);
+button.addEventListener("click", showOnlyActivities);
 
-// function showOnlyAudio() {
-//   const all = document.querySelectorAll("#child1-main.artists");
-//   all.forEach((artists) => {
-//     if (artists.classList.contains("music")) {
-//       artists.classList.remove("hidden");
-//     } else {
-//       artists.classList.add("hidden");
-//     }
-//   });
-// }
-// function showOnlyArt() {
-//   const all = document.querySelectorAll("#child1-main.artists");
-//   all.forEach((artists) => {
-//     if (artists.classList.contains("art")) {
-//       artists.classList.remove("hidden");
-//     } else {
-//       artists.classList.add("hidden");
-//     }
-//   });
-// }
-// function showOnlyActivities() {
-//   const all = document.querySelectorAll("#child1-main.artists");
-//   all.forEach((artists) => {
-//     if (artists.classList.contains("workshop")) {
-//       artists.classList.remove("hidden");
-//     } else {
-//       artists.classList.add("hidden");
-//     }
-//   });
-// }
+function showOnlyAudio() {
+  const all = document.querySelectorAll("article.artist");
+  all.forEach((artists) => {
+    if (artists.classList.contains("audio")) {
+      artists.classList.remove("hidden");
+    } else {
+      artists.classList.add("hidden");
+    }
+  });
+}
+function showOnlyArt() {
+  const all = document.querySelectorAll("article.artist");
+  all.forEach((artists) => {
+    if (artists.classList.contains("art")) {
+      artists.classList.remove("hidden");
+    } else {
+      artists.classList.add("hidden");
+    }
+  });
+}
+function showOnlyActivities() {
+  const all = document.querySelectorAll("article.artist");
+  all.forEach((artists) => {
+    if (artists.classList.contains("activities")) {
+      artists.classList.remove("hidden");
+    } else {
+      artists.classList.add("hidden");
+    }
+  });
+}
+copy.querySeelector("article").classList.add(data.category);
 
 function showArtistCover(artist) {
   //   //template
@@ -67,7 +68,5 @@ function showArtistCover(artist) {
   const parent = document.querySelector("main");
   parent.appendChild(clone);
 }
-
-// copy.querySeelector("article").classList.add(data.category)
 
 getData();
