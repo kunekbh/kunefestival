@@ -3,27 +3,128 @@
   --white: #ffffff;
 }
 
-@media only screen and (min-width: 950px) {
+.artist_image {
+  max-width: 95vw;
+}
+
+.container_find_more {
+  display: flex;
+  flex-direction: row;
+}
+
+.container_year_title {
+  display: flex;
+  flex-direction: column;
+}
+
+.container_artist_country {
+  justify-content: flex-start;
+}
+
+.artist_year {
+  justify-content: center;
+  margin-top: 0;
+  font-size: 1.5em;
+  color: grey;
+}
+
+.container_artist_country {
+  display: flex;
+}
+
+.artist_container_time_location {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.artist_title {
+  font-size: 3em;
+  margin-bottom: -5em;
+  margin-top: 0;
+}
+
+.artist_country {
+  font-size: 2.3em;
+  margin-top: 0;
+}
+
+/* styling of elements */
+
+.container_display_artist1 {
+  padding: 1em;
+}
+
+.artist_location,
+.artist_when {
+  font-weight: bold;
+  margin-bottom: -1em;
+}
+
+.artist_year,
+.artist_title,
+.artist_country,
+.artist_location,
+.artist_location_input,
+.artist_when,
+.artist_when_input,
+.find__more {
+  text-transform: uppercase;
+  font-family: montserrat;
+}
+
+.artist_description {
+  max-width: 60ch;
+  font-family: montserrat;
+  font-size: 16px;
+  line-height: 2em;
+}
+
+#article_fetch_artist {
+  display: flex;
+  flex-direction: column;
+}
+
+.container_display_artist2 {
+  order: -1;
+}
+
+@media only screen and (min-width: 1050px) {
   /* Containers for the articles that fetch data */
 
+  .container_display_artist2 {
+    order: 1;
+  }
+
   #article_fetch_artist {
-    display: flex;
-    justify-content: center;
-    max-width: 100%;
+    flex-direction: row;
   }
 
   .artist_container_time_location {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
-  .container_find_more {
+  .artist_description {
+    font-size: 1.3em;
+  }
+
+  .artist_container_time {
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  #article_fetch_artist {
     flex-direction: row;
+    justify-content: center;
+    max-width: 100%;
   }
 
   .container_year_title {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
@@ -39,40 +140,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    padding: 1em;
   }
 
   /* styling of elements */
 
   .artist_image {
     max-width: 30em;
-  }
-
-  .artist_description {
-    max-width: 60ch;
-    font-family: montserrat;
-    font-size: 2em;
-  }
-
-  .artist_location,
-  .artist_when {
-    font-weight: bold;
-    margin-bottom: -1em;
-  }
-
-  .artist_year,
-  .artist_title,
-  .artist_country,
-  .artist_location,
-  .artist_location_input,
-  .artist_when,
-  .artist_when_input,
-  .find__more {
-    text-transform: uppercase;
-    font-family: montserrat;
-  }
-
-  .artist_when {
-    text-align: right;
   }
 }
 

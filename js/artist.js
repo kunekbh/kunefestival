@@ -4,26 +4,18 @@ getData();
 
 async function getData() {
   let result = await fetch(
-    "https://johannela.dk/wp-kune/wp-json/wp/v2/artist?_embed"
+    "https://johannela.dk/wp-kune/wp-json/wp/v2/artist/81?_embed"
   );
 
   let data = await result.json();
 
-  dataReceived(data);
-}
-
-function dataReceived(data) {
-  //do something with the data
-
-  console.log(data);
-
-  data.forEach(showData);
+  showData(data);
 }
 
 // display artist description
 
 function showData(data) {
-  console.log(data.country);
+  console.log(data);
   document.querySelector(".artist_description").textContent = data.description;
   document.querySelector(".artist_title").textContent = data.title.rendered;
   document.querySelector(".artist_country").textContent = data.country;
