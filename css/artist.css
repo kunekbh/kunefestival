@@ -4,12 +4,19 @@
 }
 
 .artist_image {
-  max-width: 95vw;
+  margin: 0;
 }
 
 .container_find_more {
   display: flex;
   flex-direction: row;
+}
+
+.container_find_more2 {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .container_year_title {
@@ -24,8 +31,7 @@
 .artist_year {
   justify-content: center;
   margin-top: 0;
-  font-size: 1.5em;
-  color: grey;
+  font-size: 1em;
 }
 
 .container_artist_country {
@@ -39,13 +45,13 @@
 }
 
 .artist_title {
-  font-size: 3em;
+  font-size: 2em;
   margin-bottom: -5em;
   margin-top: 0;
 }
 
 .artist_country {
-  font-size: 2.3em;
+  font-size: 1.8em;
   margin-top: 0;
 }
 
@@ -86,14 +92,25 @@
 }
 
 .container_display_artist2 {
+  display: contents;
+}
+
+.artist_image {
   order: -1;
 }
 
 @media only screen and (min-width: 1050px) {
   /* Containers for the articles that fetch data */
 
+  .artist_year {
+    justify-content: center;
+    margin-top: 0;
+    font-size: 1.5em;
+    color: grey;
+  }
+
   .container_display_artist2 {
-    order: 1;
+    display: block;
   }
 
   #article_fetch_artist {
