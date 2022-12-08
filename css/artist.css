@@ -51,7 +51,7 @@
 }
 
 .artist_country {
-  font-size: 1.8em;
+  font-size: 1.3em;
   margin-top: 0;
 }
 
@@ -101,6 +101,17 @@
 
 @media only screen and (min-width: 1050px) {
   /* Containers for the articles that fetch data */
+
+  .artist_title {
+    font-size: 2.3em;
+    margin-bottom: -5em;
+    margin-top: 0;
+  }
+
+  .artist_country {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
 
   .artist_year {
     justify-content: center;
