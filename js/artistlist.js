@@ -2,7 +2,7 @@
 
 async function getData() {
   let result = await fetch(
-    "https://johannela.dk/wp-kune/wp-json/wp/v2/artist?_embed"
+    "https://johannela.dk/wp-kune/wp-json/wp/v2/artist?_embed&per_page=100"
   );
   dataReceived(await result.json());
 }
