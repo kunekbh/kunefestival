@@ -4,29 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/artistlist.css" />
+    <link rel="stylesheet" href="../css/artistlist.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+
     <title>LINE UP 2023</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav>
+        <a href="index.html"
+          ><img
+            class="logo"
+            src="../graphics/soundcloud.svg"
+            alt="logo"
+            width="90px"
+        /></a>
+        <div class="navbar">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">LINE UP</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">VOLUNTEER</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">BUY TICKET</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">SIGN UP</a>
+            </li>
+          </ul>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
     <main>
       <div id="child1-main">
-        <h1>LINE UP 2023</h1>
-        <button class="all">all</button>
+        <h1 class="artistlist_header">LINE UP 2023</h1>
+        <button class="all">ALL</button>
         <button class="music">AUDIO</button>
         <button class="installation">ART</button>
-        <button class="workshop">activities</button>
+        <button class="workshop">ACTIVITIES</button>
       </div>
       <template>
         <article class="artist">
-          <img src="/visual/test-img.jpeg" alt="artist name" />
+          <img
+            class="artistlistImg"
+            src="/visual/test-img.jpeg"
+            alt="artist name"
+          />
           <section class="info">
             <h3>artist name</h3>
-            <a href="artist.html">click for more info</a>
+            <a href="artist.html">read more</a>
           </section>
         </article>
       </template>
     </main>
-    <script src="/js/artistlist.js"></script>
+    <script src="../js/artistlist.js"></script>
+    <script src="../js/nav.js"></script>
   </body>
 </html>
