@@ -45,14 +45,11 @@ main {
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  margin: 0 8em;
-  padding: 5em;
 }
 
 .info {
   font-family: dance;
   letter-spacing: 0.1rem;
-
   display: flex;
   justify-items: center;
 }
@@ -86,6 +83,7 @@ main {
   justify-self: center;
   grid-column-start: 1;
   grid-column-end: 5;
+  margin-top: 2em;
 }
 
 /*minmax is to scale when going from desktop to mobile, without adjusting
@@ -131,9 +129,15 @@ main #child1-main {
   display: none;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 900px) {
   main {
     grid-column: 2/-1;
+    margin: 0 8em;
+    padding: 5em;
+  }
+
+  .artistlist_header {
+    margin-top: 0em;
   }
 }
 
@@ -154,7 +158,8 @@ button {
 }
 
 button:hover {
-  border-bottom: 1px solid var(--white);
+  /* border-bottom: 1px solid var(--white); */
+  text-decoration: underline;
 }
 
 .info h3 {
@@ -167,4 +172,16 @@ button:hover {
 .nav-item:nth-child(1) .nav-link {
   color: var(--white);
   border: 1px solid var(--white);
+}
+
+@media only screen and (min-width: 900px) {
+  main {
+    grid-column: 2/-1;
+    margin: 0 8em;
+    padding: 5em;
+  }
+
+  .artistlist_header {
+    margin-top: 0em;
+  }
 }

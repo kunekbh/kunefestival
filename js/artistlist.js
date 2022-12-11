@@ -98,6 +98,8 @@ function showArtistCover(artist) {
     artist._embedded[
       "wp:featuredmedia"
     ][0].media_details.sizes.large.source_url;
+  clone.querySelector(".info").querySelector("a").href =
+    "artist.html?id=" + artist.id;
 
   const parent = document.querySelector("main");
   parent.appendChild(clone);

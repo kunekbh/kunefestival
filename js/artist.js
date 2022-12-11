@@ -3,8 +3,10 @@
 getData();
 
 async function getData() {
+  const urlParams = new URLSearchParams(window.location.search);
+  let id = urlParams.get("id");
   let result = await fetch(
-    "https://johannela.dk/wp-kune/wp-json/wp/v2/artist/81?_embed"
+    "https://johannela.dk/wp-kune/wp-json/wp/v2/artist/" + id + "?_embed"
   );
 
   let data = await result.json();

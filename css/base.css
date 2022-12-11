@@ -36,6 +36,12 @@ nav {
   justify-content: space-between;
 }
 
+/* nav_spacer has to match logo width */
+
+.nav_spacer {
+  width: 90px;
+}
+
 img .logo {
   grid-column-start: 1;
   grid-column-end: 7;
