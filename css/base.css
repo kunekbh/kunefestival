@@ -17,6 +17,18 @@
   font-family: montserrat-reg;
   src: url("../fonts/montserrat-regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: montserrat-bold;
+  src: url("../fonts/montserrat-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: montserrat-med;
+  src: url("../fonts/montserrat-medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: montserrat-light;
+  src: url("../fonts/montserrat-light.ttf") format("truetype");
+}
 
 body,
 nav {

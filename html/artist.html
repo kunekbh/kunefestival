@@ -43,55 +43,42 @@
       </nav>
     </header>
     <main>
-      <div id="container_artist">
-        <section ID="section_fetch_artist">
-          <article ID="article_fetch_artist">
-            <div class="container_display_artist1">
-              <div class="container_year_title">
-                <p class="artist_year">2023</p>
-                <div class="container_artist_country">
-                  <h1 class="artist_title">N/A</h1>
-                  <p class="artist_country">N/A</p>
-                </div>
-              </div>
-              <div class="artist_container_time_location">
-                <div class="articst_container_location">
-                  <p class="artist_location">Location</p>
-                  <p class="artist_location_input">N/A</p>
-                </div>
-                <div class="artist_container_time">
-                  <p class="artist_when">When</p>
-                  <p class="artist_when_input">N/A</p>
-                </div>
-              </div>
-              <hr />
-              <p class="artist_description">
-                Text about the artist. Lorem ipsum dolor sit amet consectetur.
-                Libero sollicitudin quis in amet condimentum nunc amet augue
-                aliquet.
-              </p>
-            </div>
-            <div class="container_display_artist2">
-              <img
-                class="artist_image"
-                src="https://johannela.dk/wp-kune/wp-content/uploads/2022/12/Xuri-kune-300x300.jpeg"
-                alt="Xuri"
-              />
-              <div class="container_find_more2">
-                <p class="find__more">Find more from the artist</p>
-                <div class="container_find_more">
-                  <a target="_blank" class="input__soundcloud"></a>
-                  <a target="_blank" class="input__instagram"></a>
-                  <a target="_blank" class="input__vimeo"></a>
-                  <a target="_blank" class="input__youtube"></a>
-                </div>
-              </div>
-            </div>
-          </article>
-        </section>
+      <h1 class="loading">loading...</h1>
+      <div class="container_artist hidden">
+        <div class="container_name-country">
+          <h1 class="artist_name"></h1>
+          <p class="artist_country"></p>
+        </div>
+        <img class="artist_image" src="" alt="" />
+        <div class="artist_container_time_location">
+          <div class="artist_container_location">
+            <p class="artist_location">Location</p>
+            <p class="artist_location_input"></p>
+          </div>
+          <div class="artist_container_time">
+            <p class="artist_when">When</p>
+            <p class="artist_when_input"></p>
+          </div>
+        </div>
+        <div class="cont_description">
+          <hr class="top_hr" />
+          <p class="artist_intro"></p>
+          <p class="artist_description"></p>
+          <hr class="bottom_hr" />
+        </div>
+
+        <div class="container_find_more2">
+          <p class="find__more">Find more from the artist</p>
+          <div class="container_find_more">
+            <a target="_blank" class="input__soundcloud"></a>
+            <a target="_blank" class="input__instagram"></a>
+            <a target="_blank" class="input__vimeo"></a>
+            <a target="_blank" class="input__youtube"></a>
+          </div>
+        </div>
       </div>
     </main>
-    <footer></footer>
+
     <script src="../js/artist.js"></script>
   </body>
 </html>

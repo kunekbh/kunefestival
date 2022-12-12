@@ -1,29 +1,83 @@
 /* :root {
 } */
 
+main {
+  padding-top: 10vh;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+/* ----- LOADING TXT ----- */
+.loading {
+  opacity: 20%;
+  text-align: center;
+  width: 100vw;
+  font-size: 4vh;
+  margin-top: 38vh;
+  margin-bottom: 48vh;
+}
+/* ----------------------- */
+
+.container_name-country,
+.artist_container_time_location,
+.cont_description {
+  margin: 0 1rem 0 1rem;
+}
+
+/* .container_artist > div {
+  margin: 0 1rem 0 1rem;
+} */
+
+.container_artist {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black);
+}
+
+.container_artist {
+  color: var(--beige);
+}
+
 .artist_image {
   margin: 0;
+  padding: 0;
+  width: 100vw;
 }
 
 .container_find_more {
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
+}
+.find__more {
+  margin: 0;
+  padding-bottom: 1rem;
 }
 
 .container_find_more2 {
-  padding: 1em;
+  padding: 2em 0 2em 0;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.container_year_title {
-  display: flex;
-  flex-direction: column;
+.find__more,
+.container_find_more {
+  padding-right: 1rem;
 }
 
-.container_artist_country {
+.container_name-country {
   justify-content: flex-start;
+  display: flex;
+  padding-top: 2rem;
+  padding-bottom: 0.25rem;
+}
+
+.container_name-country > * {
+  margin: 0;
 }
 
 .artist_year {
@@ -32,78 +86,99 @@
   font-size: 1em;
 }
 
-.container_artist_country {
-  display: flex;
-}
-
 .artist_container_time_location {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding-top: 1rem;
 }
 
-.artist_title {
-  font-size: 2em;
-  margin-bottom: -5em;
-  margin-top: 0;
+.artist_container_time_location * {
+  margin: 0;
+}
+.artist_container_location,
+.artist_container_time {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.artist_name,
+.artist_country {
+  font-family: dance;
+  letter-spacing: 0.3rem;
+}
+
+.artist_name {
+  font-size: 2rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .artist_country {
-  font-size: 1.3em;
+  font-size: 1rem;
   margin-top: 0;
 }
 
 /* styling of elements */
 
-.container_display_artist1 {
-  padding: 1em;
+.artist_year,
+.artist_location_input,
+.artist_when_input,
+.find__more {
+  font-family: montserrat-reg;
 }
 
 .artist_location,
 .artist_when {
-  font-weight: bold;
-  margin-bottom: -1em;
+  font-family: montserrat-bold;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .artist_year,
-.artist_title,
-.artist_country,
-.artist_location,
 .artist_location_input,
-.artist_when,
 .artist_when_input,
 .find__more {
-  text-transform: uppercase;
-  font-family: montserrat;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-size: 1.25rem;
+}
+
+.artist_intro {
+  max-width: 60ch;
+  font-family: montserrat-reg;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.4em;
 }
 
 .artist_description {
   max-width: 60ch;
-  font-family: montserrat;
-  font-size: 16px;
-  line-height: 2em;
+  font-family: montserrat-reg;
+  font-size: 1rem;
+  line-height: 1.4em;
+  padding-bottom: 1rem;
 }
 
-#article_fetch_artist {
-  display: flex;
-  flex-direction: column;
-}
-
-.container_display_artist2 {
-  display: contents;
-}
-
-.artist_image {
-  order: -1;
+.top_hr,
+.bottom_hr {
+  margin: 0;
+  height: 0.1em;
+  background-color: var(--beige);
 }
 
 @media only screen and (min-width: 1050px) {
   /* Containers for the articles that fetch data */
 
-  .artist_title {
-    font-size: 2.3em;
-    margin-bottom: -5em;
-    margin-top: 0;
+  .container_artist {
+    max-width: 50vw;
+    height: 90vh;
+    overflow-y: scroll;
+  }
+
+  .artist_name {
+    font-size: 3em;
   }
 
   .artist_country {
@@ -118,61 +193,63 @@
     color: grey;
   }
 
-  .container_display_artist2 {
-    display: block;
-  }
-
-  #article_fetch_artist {
-    flex-direction: row;
-  }
-
   .artist_container_time_location {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
+  .artist_location,
+  .artist_when {
+    font-size: 1.25rem;
+  }
+
+  .artist_intro {
+    font-size: 1.1rem;
+  }
+
   .artist_description {
-    font-size: 1.3em;
+    font-size: 1.4rem;
   }
 
   .artist_container_time {
+    text-align: right;
+  }
+
+  .container_name-country {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 30vh;
   }
 
-  #article_fetch_artist {
-    flex-direction: row;
-    justify-content: center;
-    max-width: 100%;
+  .artist_image,
+  .container_find_more2 {
+    max-width: 50vw;
+    right: 0;
+    position: absolute;
   }
 
-  .container_year_title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .container_find_more2 {
+    top: calc(10vh + 50vw);
+    height: auto;
+    color: var(--black);
+    background-color: var(--beige);
+    padding-top: 1rem;
+    width: 50vw;
   }
 
-  .container_artist_country {
-    display: flex;
+  .container_name-country,
+  .artist_container_time_location,
+  .cont_description {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .container_display_artist1 {
-    padding: 1em;
+  .top_hr {
+    margin: 1rem 0 1rem 0;
   }
-
-  .container_display_artist2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 1em;
-  }
-
-  /* styling of elements */
-
-  .artist_image {
-    max-width: 30em;
+  .bottom_hr {
+    display: none;
   }
 }
 
@@ -180,9 +257,10 @@
 
 .input__soundcloud {
   background-image: url("../graphics/soundcloud.svg");
+  background-repeat: none;
   height: 30px;
   width: 30px;
-  margin: 0.5em;
+  margin-right: 1rem;
 }
 
 .input__instagram {
@@ -190,7 +268,7 @@
   background-repeat: none;
   height: 30px;
   width: 30px;
-  margin: 0.5em;
+  margin-right: 1rem;
 }
 
 .input__vimeo {
@@ -198,7 +276,7 @@
   background-repeat: none;
   height: 30px;
   width: 30px;
-  margin: 0.5em;
+  margin-right: 1rem;
 }
 
 .input__youtube {
@@ -206,7 +284,6 @@
   background-repeat: none;
   height: 30px;
   width: 30px;
-  margin: 0.5em;
 }
 
 /* Displaying the icons dark or bright */
