@@ -164,7 +164,7 @@ main {
 .top_hr,
 .bottom_hr {
   margin: 0;
-  height: 0.1em;
+  height: 0.05em;
   background-color: var(--beige);
 }
 
