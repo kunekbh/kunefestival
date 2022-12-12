@@ -13,8 +13,13 @@
   font-family: dance;
   src: url("../fonts/dancefont.ttf") format("truetype");
 }
+@font-face {
+  font-family: montserrat-reg;
+  src: url("../fonts/montserrat-regular.ttf") format("truetype");
+}
 
-* {
+body,
+nav {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
