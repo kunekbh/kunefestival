@@ -17,10 +17,13 @@ async function getData() {
 // display artist description
 
 function showData(data) {
+  document.querySelector(".container_artist").classList.remove("hidden");
+  document.querySelector(".loading").classList.add("hidden");
   console.log(data);
   document.querySelector(".artist_description").textContent = data.description;
-  document.querySelector(".artist_title").textContent = data.title.rendered;
-  document.querySelector(".artist_country").textContent = data.country;
+  document.querySelector(".artist_name").textContent = data.title.rendered;
+  //document.querySelector(".artist_country").textContent = data.country;
+  document.querySelector(".artist_country").textContent = "EU";
   document.querySelector(".artist_location_input").textContent = data.stage;
   document.querySelector(".artist_when_input").textContent = data.when;
   document.querySelector(".artist_image").src =
