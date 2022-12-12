@@ -150,7 +150,7 @@ a.nav-link::after {
     align-items: center;
     position: fixed;
     top: 0;
-    left: -110%;
+    left: -112%;
     transition: 0.5s;
     margin: 0 auto;
     background: var(--black);
