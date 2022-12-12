@@ -13,13 +13,9 @@
   font-family: dance;
   src: url("../fonts/dancefont.ttf") format("truetype");
 }
-
 @font-face {
   font-family: montserrat-reg;
-  src: url("../fonts/montserrat-regular.ttf")
-      format("woff2 supports variations"),
-    url("../fonts/montserrat-regular.ttf") format("woff2-variations");
-  font-weight: 100 1000;
+  src: url("../fonts/montserrat-regular.ttf") format("truetype");
 }
 
 body,
