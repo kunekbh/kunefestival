@@ -269,7 +269,7 @@ button {
   }
 
   .index_isla {
-    background-color: var(--white);
+    background-color: var(--black);
     height: 50vw;
     min-width: 60vw;
     margin-top: 6em;
