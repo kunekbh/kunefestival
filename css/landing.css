@@ -146,18 +146,31 @@ button {
 }
 
 .index_cont5 {
-  background-color: var(--darkgreen);
+  margin: 3em 0em;
+  background-color: var(--black);
   min-height: 5vw;
 }
 
+.index_cont5 p {
+  color: var(--beige);
+}
+.cont_stores {
+  display: flex;
+  flex-direction: column;
+}
+.appstore,
+.googlePlay {
+  padding: 1em 4em 1em;
+}
+
 .index_cont6 {
-  background-color: var(--lightgreen);
+  background-color: var(--black);
   min-height: 15vw;
   display: flex;
 }
 
 .index_cont7 {
-  background-color: var(--yellow);
+  background-color: var(--black);
   min-height: 20vw;
   display: flex;
   flex-direction: column;
@@ -168,7 +181,7 @@ button {
   min-width: 80vw;
   min-height: 40vw;
   background-color: var(--darkred);
-  margin: 1em;
+  margin: 0.5em 1em;
   border-radius: 25px;
   display: flex;
 }
@@ -227,7 +240,7 @@ button {
 }
 
 .marquee2 p {
-  margin: 1vw 2vw 0vw;
+  margin: 1vw 4vw 0vw;
 }
 
 @keyframes animate {
