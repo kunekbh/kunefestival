@@ -169,9 +169,10 @@ button {
   display: flex;
 }
 
-.index_cont7 {
+.index_cont7,
+.index_cont8 {
   background-color: var(--black);
-  min-height: 20vw;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -179,27 +180,31 @@ button {
 
 .cont7_box {
   min-width: 80vw;
-  min-height: 40vw;
+  min-height: 15vh;
   background-color: var(--darkred);
   margin: 0.5em 1em;
-  border-radius: 25px;
+  border-radius: 15px;
   display: flex;
 }
 
 .box_heading {
   font-family: dance;
-  font-size: 6vw;
+  font-size: 4vw;
   text-align: left;
-  padding: 0.5em;
+  padding: 1em;
   max-width: 5ch;
   letter-spacing: 0.2em;
   align-self: flex-end;
   color: var(--beige);
 }
 
-.index_cont8 {
-  background-color: var(--black);
-  min-height: 15vw;
+.cont8_box {
+  min-width: 80vw;
+  min-height: 40vh;
+  background-color: var(--darkred);
+  margin: 0.5em 1em;
+  border-radius: 15px;
+  display: flex;
 }
 
 /* Animation */
