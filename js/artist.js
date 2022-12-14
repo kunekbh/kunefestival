@@ -17,7 +17,7 @@ async function getData() {
 // display artist description
 
 function showData(data) {
-  document.querySelector(".container_artist").classList.remove("hidden");
+  document.querySelector(".cont_artist").classList.remove("hidden");
   document.querySelector(".loading").classList.add("hidden");
   console.log(data);
   let intro = data.description.split(".").slice(0, 1).join(".") + ".";
