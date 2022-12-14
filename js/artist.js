@@ -20,8 +20,8 @@ function showData(data) {
   document.querySelector(".container_artist").classList.remove("hidden");
   document.querySelector(".loading").classList.add("hidden");
   console.log(data);
-  let intro = data.description.split(".").slice(0, 2).join(".") + ".";
-  let description = data.description.split(".").slice(2, -1).join(".") + ".";
+  let intro = data.description.split(".").slice(0, 1).join(".") + ".";
+  let description = data.description.split(".").slice(1, -1).join(".") + ".";
   document.querySelector(".artist_intro").textContent = intro;
   document.querySelector(".artist_description").textContent = description;
   document.querySelector(".artist_name").textContent = data.title.rendered;

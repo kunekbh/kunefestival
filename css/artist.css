@@ -1,6 +1,10 @@
 /* :root {
 } */
 
+body {
+  background-color: var(--black);
+}
+
 main {
   padding-top: 10vh;
 }
@@ -147,9 +151,9 @@ main {
 
 .artist_intro {
   max-width: 60ch;
-  font-family: montserrat-reg;
+  font-family: montserrat-light;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.4em;
 }
 
@@ -205,11 +209,11 @@ main {
   }
 
   .artist_intro {
-    font-size: 1.1rem;
+    font-size: 1.3em;
   }
 
   .artist_description {
-    font-size: 1.4rem;
+    font-size: 1.1em;
   }
 
   .artist_container_time {

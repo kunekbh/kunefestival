@@ -45,42 +45,6 @@ function dataReceived(data) {
   //   console.log(hello, post);
 }
 
-// button.addEventListener("click", showOnlyAudio);
-// button.addEventListener("click", showOnlyArt);
-// button.addEventListener("click", showOnlyActivities);
-
-// function showOnlyAudio() {
-//   const all = document.querySelectorAll("article.artist");
-//   all.forEach((artists) => {
-//     if (artists.classList.contains("audio")) {
-//       artists.classList.remove("hidden");
-//     } else {
-//       artists.classList.add("hidden");
-//     }
-//   });
-// }
-// function showOnlyArt() {
-//   const all = document.querySelectorAll("article.artist");
-//   all.forEach((artists) => {
-//     if (artists.classList.contains("art")) {
-//       artists.classList.remove("hidden");
-//     } else {
-//       artists.classList.add("hidden");
-//     }
-//   });
-// }
-// function showOnlyActivities() {
-//   const all = document.querySelectorAll("article.artist");
-//   all.forEach((artists) => {
-//     if (artists.classList.contains("activities")) {
-//       artists.classList.remove("hidden");
-//     } else {
-//       artists.classList.add("hidden");
-//     }
-//   });
-// }
-// copy.querySeelector("article").classList.add(data.category);
-
 function showArtistCover(artist) {
   //   //template
   const template = document.querySelector("template").content;
@@ -88,21 +52,24 @@ function showArtistCover(artist) {
   const clone = template.cloneNode(true);
   console.log(artist._embedded["wp:term"][0][0].name);
   clone
-    .querySelector("article")
+    .querySelector("a")
     .classList.add(artist._embedded["wp:term"][0][0].name);
 
-  //   //put the content into it
-  clone.querySelector("h3").textContent = artist.title.rendered;
   //   //append it to the dom
   clone.querySelector("img").src =
     artist._embedded[
       "wp:featuredmedia"
     ][0].media_details.sizes.large.source_url;
-  clone.querySelector(".info").querySelector("a").href =
-    "artist.html?id=" + artist.id;
-
+  clone.querySelector("a").href = "artist.html?id=" + artist.id;
+  clone.querySelector(".info").style.backgroundColor = getRandomColor();
   const parent = document.querySelector("main");
   parent.appendChild(clone);
 }
 
 init();
+
+function getRandomColor() {
+  const colors = ["#fc573f97", "#f9a14997", "#d9fec297", "#fffc9197"];
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  return color;
+}
