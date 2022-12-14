@@ -29,8 +29,7 @@ function showData(data) {
   document.querySelector(".artist_country").textContent = "EU";
   document.querySelector(".artist_location_input").textContent = data.stage;
   document.querySelector(".artist_when_input").textContent = data.when;
-  document.querySelector(".artist_image").src =
-    data._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url;
+  document.querySelector(".artist_image").src = data.secondary_image["guid"];
   if (data.soundcloud) {
     document.querySelector(".input__soundcloud").href = data.soundcloud;
     document.querySelector(".input__soundcloud").classList.add("dark_some");
