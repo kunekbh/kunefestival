@@ -1,24 +1,5 @@
 /* styling used for the landing page */
 
-@font-face {
-  font-family: dance;
-  src: url("../fonts/dancefont.ttf") format("truetype");
-}
-
-:root {
-  --black: #282323;
-  --white: #ffffff;
-  --yellow: #fffc91;
-  --lightgreen: #d9fec2;
-  --darkgreen: #24553f;
-  --red: #fc573f;
-  --darkred: #761b22;
-  --blue: #a3cafd;
-
-  --beige: #fff8da;
-  --orange: #f9a049;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +18,7 @@ body {
 
 .index_cont2 {
   background-color: var(--blue);
-  min-height: 5vw;
+  min-height: 5vh;
   display: flex;
 }
 
@@ -63,7 +44,7 @@ h1 {
 
 .index_intro {
   /* background-color: var(--darkgreen); */
-  min-width: 80vw;
+  width: 80vw;
   margin: 6vh 3vh 6vh;
   /* display: flex; */
   /* justify-self: center; */
@@ -159,40 +140,97 @@ button {
   min-height: 5vw;
 }
 
+.qr-txt,
+.qr-code {
+  display: none;
+}
+
 .index_cont5 p {
   color: var(--beige);
 }
+
+.buy-txt {
+  display: grid;
+  grid-template-columns: fit-content(10%) fit-content(90%);
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 2em 4em;
+}
+
+.no-1,
+.no-2,
+.no-3 {
+  color: var(--beige);
+  font-size: 3em;
+  justify-self: end;
+  padding-right: 0.25em;
+}
+
+.no-1,
+.no-2,
+.no-3,
+.no-1-txt,
+.no-2-txt,
+.no-3-txt {
+  align-self: center;
+}
+
+.no-1-txt {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.buy-txt p,
+.buy-txt h4 {
+  font-family: montserrat-reg;
+}
+
+.cont-qr-store {
+  margin: 2em 0;
+}
+
 .cont_stores {
-  display: flex;
-  flex-direction: column;
-}
-.appstore,
-.googlePlay {
-  padding: 1em 4em 1em;
-}
-
-.index_cont6 {
-  background-color: var(--black);
-  min-height: 15vw;
-  display: flex;
-}
-
-.index_cont7,
-.index_cont8 {
-  background-color: var(--black);
-  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.cont_stores a {
+  margin: 0.5em 4em 0;
+  max-width: 300px;
+}
+
+.index_cont7,
+.index_cont8 {
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index_cont8 {
+  padding-bottom: 4rem;
+}
+
+.card-cont {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
 .cont7_box {
-  min-width: 80vw;
-  min-height: 15vh;
-  background-color: var(--darkred);
-  margin: 0.5em 1em;
+  background-image: url(../graphics/filler-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0rem;
+  width: 100%;
+  height: 10vh;
+  margin: 0;
   border-radius: 15px;
   display: flex;
+}
+
+.cont7_box:nth-child(1),
+.cont7_box:nth-child(2) {
+  margin-bottom: 0.5em;
 }
 
 .box_heading {
@@ -207,8 +245,12 @@ button {
 }
 
 .cont8_box {
-  min-width: 80vw;
-  min-height: 40vh;
+  background-image: url(../graphics/filler-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0rem;
+  width: 100%;
+  height: 20vh;
   background-color: var(--darkred);
   margin: 0.5em 1em;
   border-radius: 15px;
@@ -221,6 +263,7 @@ button {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
+  height: 100%;
 }
 
 .marquee2 {
@@ -264,27 +307,102 @@ button {
 
 @media only screen and (min-width: 900px) {
   .index_cont3 {
+    width: 100vw;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5em 0;
   }
 
   .index_intro {
-    height: 50vw;
-    min-width: 40vw;
-    margin-top: 6em;
-    margin-bottom: 6em;
-    /* display: flex; */
+    /* height: 50vw; */
+    width: 50vw;
+    margin: 0;
+    padding-left: 4em;
+    /* margin-left: 6em; */
+  }
+
+  .index_isla {
+    background-color: var(--black);
+    /* height: 50vw; */
+    width: 50vw;
+    margin: 0;
+    display: flex;
+  }
+
+  .index_cont4 {
+    width: 100vw;
+  }
+
+  .index-lineupNames {
+    max-width: 80vw;
+    margin: 5em 0;
+  }
+
+  .flex-section {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 50vw;
+    margin: auto;
+    padding: 4rem 0;
+  }
+
+  .cont-qr-store {
+    padding-right: 2rem;
+  }
+
+  .buy-txt {
+    max-width: 50vw;
+    margin: 0;
+  }
+
+  .qr-txt,
+  .qr-code {
+    display: inline-block;
+  }
+
+  .appstore-txt,
+  .cont_stores {
+    display: none;
+  }
+
+  .card-cont {
+    display: grid;
+    grid-template-columns: fit-content(90vw);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1em;
+    margin: 0 auto 8rem;
+    justify-content: center;
   }
 
   .index_cont7 {
+    grid-row: 1;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
 
   .cont7_box {
-    min-width: 30vw;
-    min-height: 30vw;
+    min-width: 25vw;
+    min-height: 25vw;
     cursor: pointer;
+    margin: 0;
+  }
+
+  .cont7_box:nth-child(1),
+  .cont7_box:nth-child(2) {
+    margin: 0 1em 0 0;
+  }
+
+  .index_cont8 {
+    grid-row: 2;
+    padding: 0;
+    height: 25vw;
+  }
+
+  .cont8_box {
+    margin: 0;
+    height: inherit;
   }
 
   .box_heading {
@@ -294,16 +412,13 @@ button {
     letter-spacing: 0.2em;
   }
 
-  .index_isla {
-    background-color: var(--black);
-    height: 50vw;
-    min-width: 60vw;
-    margin-top: 6em;
-    margin-bottom: 6em;
-    display: flex;
-  }
-
   .viewBtn:hover {
     background-color: var(--darkgreen);
+  }
+}
+
+/* we might need to create special cut-offs for cont3 */
+@media only screen and (min-width: 1200px) {
+  .index_cont3 {
   }
 }
