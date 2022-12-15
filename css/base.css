@@ -7,6 +7,8 @@
   --lightgreen: #d9fec2;
   --darkgreen: #24553f;
   --red: #fc573f;
+  --darkred: #761b22;
+  --blue: #a3cafd;
   --beige: #fff8da;
   --orange: #f9a049;
 }
@@ -31,6 +33,10 @@
   font-family: montserrat-light;
   src: url("../fonts/montserrat-light.ttf") format("truetype");
 }
+
+/* ----- standard typography ----- */
+
+/* ------------------------------- */
 
 body,
 nav,
