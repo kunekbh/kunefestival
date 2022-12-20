@@ -293,7 +293,7 @@ video {
   height: 2em;
   font-size: 1.5rem;
   font-family: "dance", "montserrat-reg", sans-serif;
-  animation: animate 5s linear infinite;
+  animation: animate 20s linear infinite;
   display: flex;
   flex-direction: row;
 }
