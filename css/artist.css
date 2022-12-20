@@ -1,10 +1,3 @@
-/* :root {
-} */
-
-body {
-  background-color: var(--black);
-}
-
 main {
   padding-top: 10vh;
 }
@@ -150,7 +143,6 @@ main {
 .artist_name,
 .artist_country {
   font-family: dance;
-  letter-spacing: 0.3rem;
 }
 
 .artist_name {
@@ -213,7 +205,12 @@ hr {
   background-color: var(--beige);
 }
 
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 900px) {
+  main {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   /* --------- GRID --------- */
   .cont_artist {
     height: 90vh;
@@ -319,7 +316,6 @@ hr {
   .cont_name-country {
     display: flex;
     justify-content: flex-end;
-    /* padding-bottom: 30vh; */
   }
 
   .cont_name-country,
