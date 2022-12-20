@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: var(--black);
-}
-
 /* Images bottom of the page  */
 
 .blue_pic {
@@ -27,7 +23,7 @@ body {
 /* containers  */
 
 .index_cont1 {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .index_cont2 {
@@ -46,7 +42,6 @@ body {
 
 h1 {
   font-family: "dance", "montserrat-reg", sans-serif;
-  letter-spacing: 0.2em;
   color: var(--beige);
 }
 
@@ -57,11 +52,8 @@ h1 {
 }
 
 .index_intro {
-  /* background-color: var(--darkgreen); */
   width: 80vw;
   margin: 6vh 3vh 6vh;
-  /* display: flex; */
-  /* justify-self: center; */
 }
 
 .index_isla {
@@ -95,7 +87,6 @@ video {
   overflow: hidden;
   text-align: center;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -117,8 +108,7 @@ video {
 .lineup_header {
   mix-blend-mode: difference;
   font-family: dance;
-  letter-spacing: 0.2em;
-  padding: 1em 0.8em;
+  padding: 1.5em 0.8em 1em;
   font-size: 2rem;
   color: var(--beige);
 }
@@ -128,7 +118,6 @@ video {
   font-family: Montserrat-med;
   text-transform: capitalize;
   font-variant: small-caps;
-  /* padding: 1em; */
   word-spacing: 0.1em;
   line-height: 1.5em;
   font-size: 1rem;
@@ -136,17 +125,26 @@ video {
   margin: 0 3em 2em;
 }
 
-button {
+.btn-poster {
   mix-blend-mode: difference;
   background: none;
   border: 1px solid var(--beige);
   border-radius: 50px;
   color: var(--beige);
-  letter-spacing: 0.2em;
   padding: 1.2em 1.5em 1em;
   text-decoration: none;
   margin: 4em 2em;
   font-family: dance;
+}
+
+.btn-poster:hover {
+  background-color: var(--beige);
+  color: var(--black);
+  mix-blend-mode: difference;
+}
+
+.btn-poster:active {
+  transform: translateY(4px);
 }
 
 .index_cont5 {
@@ -257,7 +255,6 @@ button {
   text-align: left;
   padding: 1em;
   max-width: 5ch;
-  letter-spacing: 0.2em;
   align-self: flex-end;
   color: var(--beige);
 }
@@ -278,7 +275,6 @@ button {
 .vol-text {
   mix-blend-mode: difference;
   font-family: dance;
-  letter-spacing: 0.2em;
   padding: 1em 0.8em;
   font-size: 2rem;
   color: var(--beige);
@@ -294,12 +290,10 @@ button {
 }
 
 .marquee2 {
+  height: 2em;
   font-size: 1.5rem;
   font-family: "dance", "montserrat-reg", sans-serif;
-  letter-spacing: 0.1em;
-  animation: animate 60s linear infinite;
-  /* padding-left: 10%; */
-  /* display: inline-block; */
+  animation: animate 5s linear infinite;
   display: flex;
   flex-direction: row;
 }
@@ -311,19 +305,17 @@ button {
   overflow: hidden;
 }
 
-.marquee3 {
+/* .marquee3 {
+  height: 4em;
   font-size: 1.5rem;
   font-family: Montserrat, sans-serif;
-  letter-spacing: 0.1em;
   animation: animate 60s linear infinite;
-  /* padding-left: 10%; */
-  /* display: inline-block; */
   display: flex;
   flex-direction: row;
-}
+} */
 
 .marquee2 p {
-  margin: 1vw 4vw 0vw;
+  margin: auto 0.75em;
 }
 
 @keyframes animate {
@@ -334,11 +326,10 @@ button {
 
 @media only screen and (min-width: 900px) {
   .index_cont3 {
-    width: 100vw;
+    /* width: 100vw; */
+    max-width: 800px;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin: 5em 0;
+    margin: 5em auto;
   }
 
   .cont7_box {
@@ -347,16 +338,13 @@ button {
   }
 
   .index_intro {
-    /* height: 50vw; */
     width: 50vw;
     margin: 0;
     padding-left: 4em;
-    /* margin-left: 6em; */
   }
 
   .index_isla {
     background-color: var(--black);
-    /* height: 50vw; */
     width: 50vw;
     margin: 0;
     display: flex;
@@ -368,7 +356,7 @@ button {
 
   .index-lineupNames {
     max-width: 80vw;
-    margin: 5em 0;
+    margin: 8em 0 5em;
   }
 
   .flex-section {
@@ -376,7 +364,7 @@ button {
     flex-direction: row-reverse;
     max-width: 50vw;
     margin: auto;
-    padding: 4rem 0;
+    padding: 7rem 0;
   }
 
   .cont-qr-store {
@@ -437,13 +425,11 @@ button {
   .cont8_box {
     margin: 0;
     height: inherit;
-
   }
 
   .vol-text {
     mix-blend-mode: difference;
     font-family: dance;
-    letter-spacing: 0.2em;
     padding: 1em 0.8em;
     font-size: 5rem;
     color: var(--beige);
@@ -453,7 +439,6 @@ button {
     font-size: 3vw;
     padding: 1em;
     max-width: 5ch;
-    letter-spacing: 0.2em;
   }
 
   .viewBtn:hover {
@@ -461,7 +446,17 @@ button {
   }
 }
 
-/* we might need to create special cut-offs for cont3 */
 @media only screen and (min-width: 1200px) {
-  .index_cont3 {}
+  .index_cont3 {
+    margin: 10em auto;
+    max-width: 1000px;
+  }
+
+  .index-lineupNames {
+    max-width: 1000px;
+  }
+
+  .flex-section {
+    max-width: 600px;
+  }
 }

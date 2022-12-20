@@ -1,33 +1,11 @@
-:root {
-  --black: #282323;
-  --white: #ffffff;
-  --yellow: #fffc91;
-  --lightgreen: #d9fec2;
-  --darkgreen: #24553f;
-  --red: #fc573f;
-  --beige: #fff8da;
-  --orange: #f9a149;
-}
-
 * {
   box-sizing: border-box;
-}
-
-body,
-html {
-  padding: 0;
-  margin: 0;
 }
 
 .artistlist_header {
   color: var(--yellow);
   font-family: dance;
-  letter-spacing: 0.1rem;
   padding-top: 2em;
-}
-
-body {
-  background-color: var(--black);
 }
 
 .artistlistImg {
@@ -44,7 +22,6 @@ main {
 
 .info p {
   font-family: dance;
-  letter-spacing: 0.2em;
   mix-blend-mode: difference;
 }
 
@@ -68,8 +45,6 @@ in @media */
 main #child1-main {
   grid-column: 1/-1;
 }
-
-/* .artist > img + section > h3 */
 
 .artist {
   display: grid;
@@ -121,7 +96,6 @@ button {
   background-color: var(--black);
   color: var(--white);
   font-family: dance;
-  letter-spacing: 0.1rem;
   border-bottom: 1px solid var(--black);
   cursor: pointer;
   margin: 0 5px;
@@ -153,5 +127,14 @@ button:hover {
 
   .artistlist_header {
     margin-top: 0em;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  main {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10em;
   }
 }
